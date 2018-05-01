@@ -46,17 +46,17 @@ class HighScoresViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        /*
         if indexPath.row == 0 {
             if let cell = tableView.dequeueReusableCell(withIdentifier: "HighScoreTableViewCell", for: indexPath) as? HighScoreTableViewCell {
                 cell.headerInit()
                 return cell
             }
         }
-        else {
-            if let cell = tableView.dequeueReusableCell(withIdentifier: "HighScoreTableViewCell", for: indexPath) as? HighScoreTableViewCell {
-                cell.commonInit(place: indexPath.row, score: 100, username: "nategreat13")
-                return cell
-            }
+         */
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "HighScoreTableViewCell", for: indexPath) as? HighScoreTableViewCell {
+            cell.commonInit(place: indexPath.row + 1, score: 100, username: "nategreat13")
+            return cell
         }
         return UITableViewCell()
     }

@@ -8,24 +8,25 @@
 
 import UIKit
 
-class Character {
+class Character
+{
     
     var position: CGPoint
     var velocity: (xVel: CGFloat, yVel: CGFloat)
-    var image: UIImage
+    var image: UIImageView
     var radius: CGFloat
     
     init() {
         position = CGPoint(x: 0.0, y: 0.0)
         velocity = (0.0, 0.0)
-        image = UIImage()
+        image = UIImageView()
         radius = 0.0
     }
     
     init(position: CGPoint, velocity: (xVel: CGFloat, yVel: CGFloat), image: UIImage, radius: CGFloat) {
         self.position = position
         self.velocity = velocity
-        self.image = image
+        self.image = UIImageView(image: image)
         self.radius = radius
     }
     

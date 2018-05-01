@@ -27,6 +27,7 @@ class HighScoreTableViewCell: UITableViewCell {
     }
     
     func headerInit() {
+        placeLabel.textAlignment = .center
         placeLabel.text = "Place"
         scoreLabel.text = "Score"
         usernameLabel.text = "Username"

@@ -10,10 +10,6 @@ import UIKit
 
 class MainViewController: UIViewController {
 
-    @IBOutlet var startGameButton: UIButton!
-    @IBOutlet var resumeGameButton: UIButton!
-    @IBOutlet var highScoresButton: UIButton!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -25,13 +21,12 @@ class MainViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func startGameButtonPressed(_ sender: UIButton) {
-    }
     
-    @IBAction func resumeGameButtonPressed(_ sender: UIButton) {
-    }
-    
-    @IBAction func highScoresButtonPressed(_ sender: UIButton) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toNewGame" {
+            let vc = segue.destination as! GameViewController
+            vc.game = Game()
+        }
     }
     
     

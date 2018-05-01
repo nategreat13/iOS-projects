@@ -9,6 +9,8 @@
 import UIKit
 
 class GameView: UIView {
+    
+    var backgroundImageView: UIImageView = UIImageView()
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -16,32 +18,33 @@ class GameView: UIView {
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        backgroundColor = UIColor.red
+        autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        backgroundImageView.frame = self.bounds
+        addSubview(backgroundImageView)
     }
     
-    override func draw(_ rect: CGRect) {
-        super.draw(rect)
-        
-        // get the context and clear the bounds
-        guard let context: CGContext = UIGraphicsGetCurrentContext() else {
-            return
-        }
-        context.setStrokeColor(UIColor.black.cgColor)
-        context.setLineWidth(2.0)
-        
-        context.move(to: CGPoint(x: bounds.minX + 10, y: bounds.minY + 10))
-        context.addLine(to: CGPoint(x: bounds.maxX - 10, y: bounds.minY + 10))
-        
-        context.move(to: CGPoint(x: bounds.minX + 10, y: bounds.minY + 10))
-        context.addLine(to: CGPoint(x: bounds.minX + 10, y: bounds.maxY - 10))
-        
-        context.move(to: CGPoint(x: bounds.maxX - 10, y: bounds.minY + 10))
-        context.addLine(to: CGPoint(x: bounds.maxX - 10, y: bounds.maxY - 10))
-        
-        context.move(to: CGPoint(x: bounds.minX + 10, y: bounds.maxY - 10))
-        context.addLine(to: CGPoint(x: bounds.maxX - 10, y: bounds.maxY - 10))
-        
-        context.drawPath(using: .fillStroke)
+    func addCharacter(character: Character) {
+        character.image.frame = CGRect(x: bounds.minX + (character.position.x - character.radius), y: bounds.minY + (character.position.y - character.radius), width: 2*character.radius, height: 2*character.radius)
+        addSubview(character.image)
+    }
+    
+    func updateCharacterFrame(character: Character) {
+        character.image.frame = CGRect(x: bounds.minX + (character.position.x - character.radius), y: bounds.minY + (character.position.y - character.radius), width: 2*character.radius, height: 2*character.radius)
+    }
+    
+    func removeImageView(imageView: UIImageView) {
+        imageView.removeFromSuperview()
+    }
+    
+    func gameOver(score: Int) {
+        let gameOverLabel = UILabel()
+        gameOverLabel.text = "Game Over! Your Score is \(score)"
+        addSubview(gameOverLabel)
+        gameOverLabel.textAlignment = .center
+        gameOverLabel.lineBreakMode = .byWordWrapping
+        gameOverLabel.numberOfLines = 0
+        gameOverLabel.font = UIFont(name: "Helvetica", size: 36)
+        gameOverLabel.frame = CGRect(x: bounds.midX - 100, y: bounds.midY - 125, width: 200, height: 250)
     }
 
 }
