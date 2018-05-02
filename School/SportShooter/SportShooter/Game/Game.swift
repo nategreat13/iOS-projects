@@ -142,7 +142,7 @@ class Game {
             delegate!.levelFinished()
         }
         // Move the player
-        player.move(time: elapsedTime)
+        player.move(time: elapsedTime, width: width, height: height)
         
         // Move each enemy
         for enemy in enemies {
@@ -158,7 +158,7 @@ class Game {
         if enemies.count > 0 {
             for i in 0...enemies.count-1 {
                 // If there is a collision
-                if (enemies[i].collidesWith(pos: player.position, rad: player.radius)) {
+                if (enemies[i].collidesWith(pos: player.position, rad: player.radius - 10)) {
                     // Remove the enemy
                     delegate!.removeImageView(imageView: enemies[i].image)
                     enemies.remove(at: i)

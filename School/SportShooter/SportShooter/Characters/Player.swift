@@ -32,6 +32,13 @@ class Player: Character {
         super.init(position: position, velocity: velocity, image: image, radius: radius)
     }
     
+    // Move the player, but also make sure the player doesnt leave the bounds
+    func move(time: TimeInterval, width: CGFloat, height: CGFloat) {
+        if CGRect(x: 0, y: 0, width: width, height: height).contains(CGPoint(x: position.x + velocity.xVel * CGFloat(time), y: position.y + velocity.yVel * CGFloat(time))) {
+            position = CGPoint(x: position.x + velocity.xVel * CGFloat(time), y: position.y + velocity.yVel * CGFloat(time))
+        }
+    }
+    
     // Save the player to the database for the user with the given email
     func saveToDatabaseFor(email: String) {
         // Save the position

@@ -49,6 +49,8 @@ class GameViewController: UIViewController, GameDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        DB.currentGameViewController = self
+        
         // Make sure that the gameView and its background image have the correct frame
         gameView.frame = CGRect(x: view.bounds.minX, y: view.bounds.minY + 100, width: view.bounds.width, height: view.bounds.height - 250)
         gameView.backgroundImageView.frame = gameView.bounds
@@ -457,5 +459,14 @@ class GameViewController: UIViewController, GameDelegate {
             self.dismiss(animated: false, completion: nil)
         }
     }
+    
+    func pauseGame() {
+        // Stop the timers
+        displayLoopTimer.invalidate()
+        gameLoopTimer.invalidate()
+        // Save the game to the database
+        game.saveToDatabaseFor(email: DB.currentEmail)
+    }
+    
     
 }

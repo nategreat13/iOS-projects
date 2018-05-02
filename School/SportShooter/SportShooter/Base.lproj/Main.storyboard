@@ -515,8 +515,6 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="backButtonPressed:" destination="2Md-cU-aFe" eventType="touchUpInside" id="T9h-kd-X1N"/>
-                                    <action selector="backButtonPressed:" destination="ARy-bJ-TlP" eventType="touchUpInside" id="fo3-wx-xWU"/>
                                     <segue destination="a0k-Lq-bfs" kind="show" identifier="toMain" id="BxM-Mt-PdW"/>
                                 </connections>
                             </button>
@@ -560,7 +558,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tmt-me-xJk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2917.5999999999999" y="628.33583208395805"/>
+            <point key="canvasLocation" x="2917.3913043478265" y="627.71739130434787"/>
         </scene>
         <!--Register View Controller-->
         <scene sceneID="pPH-fG-7nk">
@@ -681,9 +679,9 @@
         <image name="SoccerStadium" width="800" height="992"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="fEN-kk-0Mt"/>
+        <segue reference="y1M-cu-IJc"/>
         <segue reference="NVx-cs-ysF"/>
-        <segue reference="zwd-7R-0w1"/>
-        <segue reference="EVG-p4-LOb"/>
+        <segue reference="BxM-Mt-PdW"/>
+        <segue reference="gPo-WV-7Di"/>
     </inferredMetricsTieBreakers>
 </document>

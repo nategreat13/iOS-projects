@@ -12,6 +12,8 @@ import Firebase
 // A class to hold global variables for easy access from within the other parts of code
 class DB {
     
+    public static var currentGameViewController: GameViewController?
+    
     // Level 1 image names for characters
     public static let level1PlayerImageName = "SoccerStanding"
     public static let level1EnemyImageName = "SoccerBall"
