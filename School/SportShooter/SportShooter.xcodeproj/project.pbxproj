@@ -18,6 +18,8 @@
 		047322652095442F000E793D /* Ball.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047322642095442F000E793D /* Ball.swift */; };
 		0473226720954BE1000E793D /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0473226620954BE1000E793D /* GameView.swift */; };
 		0473226B20955954000E793D /* ControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0473226A20955954000E793D /* ControlView.swift */; };
+		04837EAD20990D69000CEBAC /* DB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04837EAC20990D69000CEBAC /* DB.swift */; };
+		04837EAF20990E6F000CEBAC /* HighScores.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04837EAE20990E6F000CEBAC /* HighScores.swift */; };
 		04AFB9DF209229EA00521F0C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AFB9DE209229EA00521F0C /* LoginViewController.swift */; };
 		04AFB9E22092357700521F0C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04AFB9E12092357700521F0C /* GoogleService-Info.plist */; };
 		04F74E09209252D10032E3AB /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F74E08209252D10032E3AB /* MainViewController.swift */; };
@@ -42,6 +44,8 @@
 		047322642095442F000E793D /* Ball.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ball.swift; sourceTree = "<group>"; };
 		0473226620954BE1000E793D /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
 		0473226A20955954000E793D /* ControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlView.swift; sourceTree = "<group>"; };
+		04837EAC20990D69000CEBAC /* DB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DB.swift; sourceTree = "<group>"; };
+		04837EAE20990E6F000CEBAC /* HighScores.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighScores.swift; sourceTree = "<group>"; };
 		04AFB9DE209229EA00521F0C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		04AFB9E12092357700521F0C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		04F74E08209252D10032E3AB /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -76,6 +80,7 @@
 				0407F7F2209287AC0079A06F /* HighScoresViewController.swift */,
 				0407F7F420928B4D0079A06F /* HighScoreTableViewCell.swift */,
 				0407F7F520928B4D0079A06F /* HighScoreTableViewCell.xib */,
+				04837EAE20990E6F000CEBAC /* HighScores.swift */,
 			);
 			path = "High Scores";
 			sourceTree = "<group>";
@@ -144,6 +149,7 @@
 				04FA017720910865000FFB86 /* LaunchScreen.storyboard */,
 				04FA017A20910865000FFB86 /* Info.plist */,
 				04AFB9E12092357700521F0C /* GoogleService-Info.plist */,
+				04837EAC20990D69000CEBAC /* DB.swift */,
 			);
 			path = SportShooter;
 			sourceTree = "<group>";
@@ -294,8 +300,10 @@
 				04FA017120910860000FFB86 /* ViewController.swift in Sources */,
 				0473226720954BE1000E793D /* GameView.swift in Sources */,
 				0407F7F620928B4D0079A06F /* HighScoreTableViewCell.swift in Sources */,
+				04837EAD20990D69000CEBAC /* DB.swift in Sources */,
 				0473225920953E4D000E793D /* GameViewController.swift in Sources */,
 				0473226220954395000E793D /* Game.swift in Sources */,
+				04837EAF20990E6F000CEBAC /* HighScores.swift in Sources */,
 				0473225E209541A1000E793D /* Enemy.swift in Sources */,
 				0407F7F3209287AC0079A06F /* HighScoresViewController.swift in Sources */,
 				04FA016F20910860000FFB86 /* AppDelegate.swift in Sources */,

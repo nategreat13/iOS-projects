@@ -19,6 +19,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         FirebaseApp.configure()
         
+        DB.database = Database.database().reference()
+        print(DB.database.description())
+        
+        /*
+        for i in 1...10 {
+            DB.database.child("HighScores").child(String(i)).updateChildValues(["Date": 0, "Username": "", "Score": 0])
+        }
+        */
+        
+        DB.database.child("HighScores").observeSingleEvent(of: .value, with: { (snapshot) in
+            let value = snapshot.value as? NSDictionary ?? [:]
+            DB.highScores = HighScores(snapshot: value)
+        })
+ 
         return true
     }
 

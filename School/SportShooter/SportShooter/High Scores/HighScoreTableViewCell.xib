@@ -27,7 +27,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="40" id="OmP-sP-J1v"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -40,8 +40,17 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Opt-by-Ydi">
+                                <rect key="frame" x="110" y="0.0" width="100" height="79.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="5K1-yY-AKX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="nategreat13" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wo2-FX-0gE">
-                                <rect key="frame" x="110" y="0.0" width="190" height="79.5"/>
+                                <rect key="frame" x="220" y="0.0" width="80" height="79.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -58,6 +67,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="dateLabel" destination="Opt-by-Ydi" id="e5c-Bm-R8Z"/>
                 <outlet property="placeLabel" destination="exW-hG-Eci" id="Pma-JY-Jsg"/>
                 <outlet property="scoreLabel" destination="n7S-03-UvJ" id="ooO-Fr-YbF"/>
                 <outlet property="usernameLabel" destination="wo2-FX-0gE" id="fsv-fL-qUo"/>
