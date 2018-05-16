@@ -1,0 +1,6 @@
+framework module Pods_Bracket_Challenge {
+  umbrella header "Pods-Bracket Challenge-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -20,7 +20,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FirebaseApp.configure()
         
         DB.database = Database.database().reference()
-        print(DB.database.description())
         
         /*
         for i in 6...10 {

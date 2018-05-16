@@ -43,6 +43,8 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
         Auth.auth().createUser(withEmail: email, password: password) { (user, error) in
             // If it didnt work, let the user know
             if error != nil {
+                print(error!.localizedDescription)
+                print(error.debugDescription)
                 let alert = UIAlertController(title: "Something went wrong", message: "Make sure your password has at least 8 characters, 1 numeral, and 1 capital letter.", preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
                 }))
